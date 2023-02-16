@@ -1,10 +1,11 @@
+const path = require("path");
 const axios = require("axios");
 const dotenv = require("dotenv");
 const prompt = require("prompt");
 
 prompt.start();
 
-dotenv.config();
+dotenv.config({ path: path.resolve(__dirname, ".env") });
 
 // Account Variables
 let EMAIL = process.env.EMAIL;
