@@ -33,6 +33,9 @@ let jwt_header = {};
 start();
 
 async function start() {
+  // display current time
+  console.log(new Date().toLocaleTimeString());
+
   if (EMAIL == null) {
     const res = await prompt.get({ properties: { email: { hidden: false } } });
     EMAIL = res.email;
