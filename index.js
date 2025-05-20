@@ -109,6 +109,12 @@ async function getPortfolioGroupInfo(group) {
 }
 
 async function handleCalculatedTrades(group, calculatedTrades) {
+  
+  if (!calculatedTrades) {
+    console.log(" (none)");
+    return;
+  }
+  
   if (calculatedTrades.trades.length == 0) {
     console.log(" (none)");
     return;
